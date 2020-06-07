@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "/bs/L/VXS76OAgcnLWM856usn1zO12Arzp1AySCB6bNEVQOY60VAIpHu6KRgrtxleA0R+XRDyi20bLwkJ5K+cA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lii\\source\\repos\\TestDrive\\TestDrive\\TestDrive\\TestDrive.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lii\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\lii\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\lii\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}
