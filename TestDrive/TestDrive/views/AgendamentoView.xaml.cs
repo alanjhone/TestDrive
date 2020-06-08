@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using TestDrive.Models;
 using TestDrive.ViewModels;
 using TestDrive.Views;
@@ -15,17 +16,17 @@ namespace TestDrive.views
     public partial class AgendamentoView : ContentPage
     {
 
-        public AgendamentoViewModel AgendamentoViewModel { get; set; }
-
         public AgendamentoView(Veiculo veiculo)
         {
             InitializeComponent();
-            this.AgendamentoViewModel = new AgendamentoViewModel(veiculo);
-            this.BindingContext = this.AgendamentoViewModel;
+            this.BindingContext = new AgendamentoViewModel(veiculo);
         }
 
-        private void Btn_Agendamento_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
+            base.OnAppearing();
+            MessagingCenter.Subscribe<Agendamento>(this, "BtnAgendarCommand", (agendamento) =>
+            {
             DisplayAlert("Agendamento",
                 string.Format(
                 @" 
@@ -35,12 +36,20 @@ namespace TestDrive.views
                 E-mail: {3}
                 Data: {4}
                 Hora: {5}",
-                this.AgendamentoViewModel.Agendamento.Veiculo.Nome,
-                this.AgendamentoViewModel.Agendamento.Pessoa.Nome,
-                this.AgendamentoViewModel.Agendamento.Pessoa.Fone,
-                this.AgendamentoViewModel.Agendamento.Pessoa.Email,
-                this.AgendamentoViewModel.Agendamento.DataAgendamento.ToString("dd/MM/yyy"),
-                this.AgendamentoViewModel.Agendamento.HoraAgendamento), "OK");
+                agendamento.Veiculo.Nome,
+                agendamento.Pessoa.Nome,
+                agendamento.Pessoa.Fone,
+                agendamento.Pessoa.Email,
+                agendamento.DataAgendamento.ToString("dd/MM/yyy"),
+                agendamento.HoraAgendamento), "OK");
+            });
         }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<Agendamento>(this, "BtnAgendarCommand");
+        }
+
     }
 }

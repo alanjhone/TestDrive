@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using TestDrive.Models;
+using Xamarin.Forms;
 
 namespace TestDrive.ViewModels
 {
@@ -12,6 +14,10 @@ namespace TestDrive.ViewModels
         {
             this.Agendamento = new Agendamento();
             this.Agendamento.Veiculo = veiculo;
+            this.BtnAgendarCommand = new Command(() =>
+            {
+                MessagingCenter.Send<Agendamento>(this.Agendamento, "BtnAgendarCommand");
+            });
         }
 
         public Agendamento Agendamento { get; set; }
@@ -85,6 +91,8 @@ namespace TestDrive.ViewModels
                 Agendamento.HoraAgendamento = value;
             }
         }
+
+        public ICommand BtnAgendarCommand { get; set; }
 
     }
 }

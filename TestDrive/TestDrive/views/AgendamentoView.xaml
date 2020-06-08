@@ -32,7 +32,7 @@
             </TableRoot>
         </TableView>
 
-        <Button x:Name="Btn_Agendamento" Text="Agendamento" Clicked="Btn_Agendamento_Clicked"></Button>
+        <Button x:Name="Btn_Agendamento" Text="Agendamento" Command="{Binding BtnAgendarCommand}"></Button>
         
     </StackLayout>
 

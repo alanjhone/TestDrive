@@ -15,18 +15,27 @@ namespace TestDrive.views
     public partial class DetalheView : ContentPage
     {
 
-        public Veiculo Veiculo { get; set; }
-
         public DetalheView(Veiculo veiculo)
         {
             InitializeComponent();
-            this.Veiculo = veiculo;
             this.BindingContext = new DetalheViewModel(veiculo);
         }
 
-        private void btnProximo_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            Navigation.PushAsync(new AgendamentoView(this.Veiculo));
+            base.OnAppearing();
+            MessagingCenter.Subscribe<Veiculo>(this, "BtnProximoCommand", (veiculo) =>
+            {
+                Navigation.PushAsync(new AgendamentoView(veiculo));
+            });
         }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<Veiculo>(this, "BtnProximoCommand");
+        }
+        
+
     }
 }
