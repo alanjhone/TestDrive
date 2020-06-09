@@ -15,13 +15,17 @@ namespace TestDrive.Views
     public partial class ListagemView : ContentPage
     {
 
+        public ListagemViewModel ListagemViewModel { get; set; }
+
         public ListagemView()
         {
             InitializeComponent();
+            ListagemViewModel = new ListagemViewModel();
+            this.BindingContext = this.ListagemViewModel;
         }
 
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
             MessagingCenter.Subscribe<Veiculo>(this, "VeiculoSelecionado", 
@@ -29,6 +33,10 @@ namespace TestDrive.Views
                 {
                     Navigation.PushAsync(new DetalheView(veiculo));
                 });
+
+
+            await this.ListagemViewModel.GetVeiculos();
+
         }
 
         protected override void OnDisappearing()

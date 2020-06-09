@@ -16,39 +16,45 @@ namespace TestDrive.views
     public partial class AgendamentoView : ContentPage
     {
 
+        public AgendamentoViewModel AgendamentoViewModel { get; set; }
+
         public AgendamentoView(Veiculo veiculo)
         {
             InitializeComponent();
-            this.BindingContext = new AgendamentoViewModel(veiculo);
+            this.AgendamentoViewModel = new AgendamentoViewModel(veiculo);
+            this.BindingContext = this.AgendamentoViewModel;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            MessagingCenter.Subscribe<Agendamento>(this, "BtnAgendarCommand", (agendamento) =>
+
+            MessagingCenter.Subscribe<Agendamento>(this, "BtnAgendarCommand", async (agendamento) =>
             {
-            DisplayAlert("Agendamento",
-                string.Format(
-                @" 
-                Veículo: {0}
-                Nome: {1}
-                Fone: {2}
-                E-mail: {3}
-                Data: {4}
-                Hora: {5}",
-                agendamento.Veiculo.Nome,
-                agendamento.Pessoa.Nome,
-                agendamento.Pessoa.Fone,
-                agendamento.Pessoa.Email,
-                agendamento.DataAgendamento.ToString("dd/MM/yyy"),
-                agendamento.HoraAgendamento), "OK");
+
+                var status = await DisplayAlert("Salvar Agendamento", "Deseja confirmar esta operação?", "sim", "não");
+                if (status)
+                {
+                    await this.AgendamentoViewModel.SalvarAgendamentoAsync();
+                }
             });
+
+            MessagingCenter.Subscribe<Agendamento>(this, "SucessoAgendamento", (msg) => {
+                DisplayAlert("Agendamento", "Operação realizada com sucesso!", "Ok");
+            });
+
+            MessagingCenter.Subscribe<ArgumentException>(this, "FalhaAgendamento", (msg) => {
+                DisplayAlert("Agendamento", "Não foi possível realizar esta operação!", "Ok");
+            });
+
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
             MessagingCenter.Unsubscribe<Agendamento>(this, "BtnAgendarCommand");
+            MessagingCenter.Unsubscribe<Agendamento>(this, "SucessoAgendamento");
+            MessagingCenter.Unsubscribe<ArgumentException>(this, "FalhaAgendamento");
         }
 
     }

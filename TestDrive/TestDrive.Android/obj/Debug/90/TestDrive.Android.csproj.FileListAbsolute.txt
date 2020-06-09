@@ -474,3 +474,8 @@ C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\sta
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\System.Net.Http.Extensions.dll
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\System.Net.Http.Primitives.dll
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\System.Net.Primitives.dll
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.dll
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
