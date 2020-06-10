@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrive.Android", "TestDrive\TestDrive.Android\TestDrive.Android.csproj", "{52CCFDF9-F7E6-4753-AC3E-DE3C97F2D99C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrive", "TestDrive\TestDrive\TestDrive.csproj", "{1C04DCCD-8780-4B3F-987D-133E5F46B944}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDrive", "TestDrive\TestDrive\TestDrive.csproj", "{1C04DCCD-8780-4B3F-987D-133E5F46B944}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

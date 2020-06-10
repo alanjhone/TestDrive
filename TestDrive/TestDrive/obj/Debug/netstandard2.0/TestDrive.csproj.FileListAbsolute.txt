@@ -12,5 +12,6 @@ C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\views\ListagemView.xaml.g.cs
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\views\DetalheView.xaml.g.cs
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\views\AgendamentoView.xaml.g.cs
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\views\LoginView.xaml.g.cs
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.csproj.CoreCompileInputs.cache
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\XamlC.stamp
