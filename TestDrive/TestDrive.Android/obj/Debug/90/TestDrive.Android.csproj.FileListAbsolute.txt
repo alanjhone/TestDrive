@@ -479,3 +479,5 @@ C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\and
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\System.Net.Primitives.dll
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.dll
 C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\res\drawable\perfil.png
+C:\Users\lii\source\repos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\90\res\drawable\perfil_128.png
