@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.views.AgendamentoView.xaml", "views/AgendamentoView.xaml", typeof(global::TestDrive.views.AgendamentoView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.Views.AgendamentoView.xaml", "Views/AgendamentoView.xaml", typeof(global::TestDrive.views.AgendamentoView))]
 
 namespace TestDrive.views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("views\\AgendamentoView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\AgendamentoView.xaml")]
     public partial class AgendamentoView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

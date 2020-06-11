@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.views.DetalheView.xaml", "views/DetalheView.xaml", typeof(global::TestDrive.views.DetalheView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.Views.DetalheView.xaml", "Views/DetalheView.xaml", typeof(global::TestDrive.views.DetalheView))]
 
 namespace TestDrive.views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("views\\DetalheView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\DetalheView.xaml")]
     public partial class DetalheView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

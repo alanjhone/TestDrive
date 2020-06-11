@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.views.ListagemView.xaml", "views/ListagemView.xaml", typeof(global::TestDrive.Views.ListagemView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.Views.ListagemView.xaml", "Views/ListagemView.xaml", typeof(global::TestDrive.Views.ListagemView))]
 
 namespace TestDrive.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("views\\ListagemView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\ListagemView.xaml")]
     public partial class ListagemView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

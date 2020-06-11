@@ -20,7 +20,7 @@ namespace TestDrive
         {
             MessagingCenter.Subscribe<Usuario>(this, "SucessoLogin", (user) =>
             {
-                MainPage = new NavigationPage(new ListagemView());
+                MainPage = new MasterDetailView(user);
             });
         }
 

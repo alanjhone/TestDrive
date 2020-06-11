@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.views.LoginView.xaml", "views/LoginView.xaml", typeof(global::TestDrive.views.LoginView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TestDrive.Views.LoginView.xaml", "Views/LoginView.xaml", typeof(global::TestDrive.views.LoginView))]
 
 namespace TestDrive.views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("views\\LoginView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\LoginView.xaml")]
     public partial class LoginView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

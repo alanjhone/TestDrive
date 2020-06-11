@@ -6,6 +6,19 @@ namespace TestDrive.Models
 {
     public class Pessoa
     {
+        public Pessoa()
+        {
+                
+        }
+
+        public Pessoa(string Nome, string Telefone, string Email, string DataNascimento)
+        {
+            this.Nome = Nome;
+            this.Fone = Telefone;
+            this.Email = Email;
+            this.DataNascimento = DataNascimento;
+        }
+
         public string Nome { get; set; }
         public string Fone { get; set; }
         public string Email { get; set; }

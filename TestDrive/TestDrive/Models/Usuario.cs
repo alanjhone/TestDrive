@@ -12,8 +12,14 @@ namespace TestDrive.Models
             Pessoa = new Pessoa();
         }
 
+        public Usuario(int id, string senha, Pessoa pessoa)
+        {
+            this.Id = id;
+            this.Senha = senha;
+            this.Pessoa = pessoa;
+        }
+
         public int Id { get; set; }
-        public string Login { get; set; }
 
         public string Senha { get; set; }
 
@@ -23,6 +29,23 @@ namespace TestDrive.Models
 
     public class LoginResult
     {
-        public Usuario Usuario { get; set; }
+
+        public int Id { get; set; }
+
+        public string Nome { get; set; }
+
+        public string DataNascimento { get; set; }
+
+        public string Telefone { get; set; }
+
+        public string Email { get; set; }
+
     }
+
+    public class UsuarioLogado
+    {
+        public LoginResult Usuario { get; set; }
+    }
+
+
 }
