@@ -14,10 +14,14 @@ namespace TestDrive.views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetalheView : ContentPage
     {
+        public Usuario Usuario { get;private set; }
+        public Veiculo Veiculo { get; private set; }
 
-        public DetalheView(Veiculo veiculo)
+        public DetalheView(Veiculo veiculo, Usuario usuario)
         {
             InitializeComponent();
+            this.Veiculo = veiculo;
+            this.Usuario = usuario;
             this.BindingContext = new DetalheViewModel(veiculo);
         }
 
@@ -26,7 +30,7 @@ namespace TestDrive.views
             base.OnAppearing();
             MessagingCenter.Subscribe<Veiculo>(this, "BtnProximoCommand", (veiculo) =>
             {
-                Navigation.PushAsync(new AgendamentoView(veiculo));
+                Navigation.PushAsync(new AgendamentoView(veiculo, this.Usuario));
             });
         }
 

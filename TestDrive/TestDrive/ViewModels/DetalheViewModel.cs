@@ -17,7 +17,7 @@ namespace TestDrive.ViewModels
             this.Veiculo = veiculo;
             this.BtnProximoCommand = new Command(() =>
             {
-                MessagingCenter.Send<Veiculo>(this.Veiculo, "BtnProximoCommand");
+                MessagingCenter.Send<Veiculo>(veiculo, "BtnProximoCommand");
             });
         }
 

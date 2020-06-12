@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,6 +11,8 @@ namespace TestDrive.Models
         public const int AR_CONDICIONADO = 800;
         public const int MP3 = 500;
 
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public bool TemFreioABS { get; set; }
         public bool TemArcondicionado { get; set; }
         public bool TemMp3 { get; set; }

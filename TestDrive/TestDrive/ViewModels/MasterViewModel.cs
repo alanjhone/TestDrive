@@ -18,6 +18,9 @@ namespace TestDrive.ViewModels
         public ICommand SalvarPerfilCommand { get; private set; }
         public ICommand EditarCommand { get; private set; }
         public ICommand TirarFotoCommand { get; private set; }
+        public ICommand MeusAgendamentosCommand { get; private set; }
+        public ICommand NovoAgendamentoCommand { get; private set; }
+        
 
         public Usuario Usuario
         {
@@ -49,9 +52,14 @@ namespace TestDrive.ViewModels
                 DependencyService.Get<ICamera>().TirarFoto();
             });
 
-            MessagingCenter.Subscribe<byte[]>(this, "FotoCapturada", (bytes) => 
+            MeusAgendamentosCommand = new Command(() =>
             {
-                ImagemPerfil = ImageSource.FromStream(() => new MemoryStream(bytes));
+                MessagingCenter.Send<Usuario>(usuario, "MeusAgendamentos");
+            });
+
+            NovoAgendamentoCommand = new Command(() =>
+            {
+                MessagingCenter.Send<Usuario>(usuario, "NovoAgendamento");
             });
 
         }
@@ -60,7 +68,15 @@ namespace TestDrive.ViewModels
         {
             this.usuario = usuario;
             DefinirComandos(usuario);
+            AssinarComandos();
+        }
 
+        private void AssinarComandos()
+        {
+            MessagingCenter.Subscribe<byte[]>(this, "FotoCapturada", (bytes) =>
+            {
+                ImagemPerfil = ImageSource.FromStream(() => new MemoryStream(bytes));
+            });
         }
 
         private bool editando = false;

@@ -7,12 +7,4 @@
              mc:Ignorable="d"
              x:Class="TestDrive.Views.MasterDetailView">
 
-    <MasterDetailPage.Detail>
-        <NavigationPage>
-            <x:Arguments>
-                <view:ListagemView></view:ListagemView>
-            </x:Arguments>
-        </NavigationPage>
-    </MasterDetailPage.Detail>
-    
 </MasterDetailPage>

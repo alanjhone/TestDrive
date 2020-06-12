@@ -18,10 +18,10 @@ namespace TestDrive.views
 
         public AgendamentoViewModel AgendamentoViewModel { get; set; }
 
-        public AgendamentoView(Veiculo veiculo)
+        public AgendamentoView(Veiculo veiculo, Usuario usuario)
         {
             InitializeComponent();
-            this.AgendamentoViewModel = new AgendamentoViewModel(veiculo);
+            this.AgendamentoViewModel = new AgendamentoViewModel(veiculo, usuario);
             this.BindingContext = this.AgendamentoViewModel;
         }
 
@@ -29,6 +29,12 @@ namespace TestDrive.views
         {
             base.OnAppearing();
 
+            AssinarMessagens();
+
+        }
+          
+        private void AssinarMessagens()
+        {
             MessagingCenter.Subscribe<Agendamento>(this, "BtnAgendarCommand", async (agendamento) =>
             {
 
@@ -39,14 +45,17 @@ namespace TestDrive.views
                 }
             });
 
-            MessagingCenter.Subscribe<Agendamento>(this, "SucessoAgendamento", (msg) => {
-                DisplayAlert("Agendamento", "Operação realizada com sucesso!", "Ok");
+            MessagingCenter.Subscribe<Agendamento>(this, "SucessoAgendamento", async (msg) =>
+            {
+                await DisplayAlert("Agendamento", "Operação realizada com sucesso!", "Ok");
+                await Navigation.PopToRootAsync();
             });
 
-            MessagingCenter.Subscribe<ArgumentException>(this, "FalhaAgendamento", (msg) => {
-                DisplayAlert("Agendamento", "Não foi possível realizar esta operação!", "Ok");
+            MessagingCenter.Subscribe<ArgumentException>(this, "FalhaAgendamento", async (msg) =>
+            {
+                await DisplayAlert("Agendamento", "Não foi possível realizar esta operação!", "Ok");
+                await Navigation.PopToRootAsync();
             });
-
         }
 
         protected override void OnDisappearing()
